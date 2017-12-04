@@ -1,0 +1,19 @@
+{
+    "name": "wrap-testsuite",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "WRAP",
+    "scripts": {
+        "test-chrome": "cross-env browserName=chrome version=latest platform=WIN10 mocha index.js --timeout 60000 --reporter xunit > xunit.xml",
+        "test-edge": "cross-env browserName=MicrosoftEdge version=latest platform=WIN10 mocha index.js --timeout 60000 --reporter xunit > xunit.xml",
+        "test-ie": "cross-env browserName=\"internet explorer\" version=11 platform=WIN10 mocha index.js --timeout 60000 --reporter xunit > xunit.xml",
+        "test-safari": "cross-env browserName=safari version=latest platform=MAC mocha index.js --timeout 60000 --reporter xunit > xunit.xml"
+    },
+    "dependencies": {
+        "cross-env": "^5.1.0",
+        "gm": "^1.23.0",
+        "mocha": "^3.5.3",
+        "selenium-webdriver": "^3.6.0",
+        "xmlbuilder": "^9.0.4"
+    }
+}
